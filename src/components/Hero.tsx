@@ -54,16 +54,16 @@ export function Hero() {
   const textY = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
   return (
-    <section ref={targetRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section ref={targetRef} className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden">
       <FloatingParticles />
       <motion.div 
         style={{ scale }}
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center will-change-transform"
+        className="absolute inset-0 bg-[url('/Hero_Faridah.jpeg')] bg-cover bg-center will-change-transform"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-ink/30 to-ink/10" />
       </motion.div>
 
-      <div className="container mx-auto px-12 relative z-10 flex flex-col items-center justify-center min-h-screen">
+      <div className="container mx-auto px-12 relative z-10 h-full flex flex-col items-center justify-center">
 
         <motion.div 
           style={{ opacity, y: textY }}
@@ -115,7 +115,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-12 right-12 z-20 flex flex-col gap-4">
+      <div className="absolute bottom-8 right-8 z-20 flex flex-col gap-4">
         {[1, 2, 3].map((i) => (
           <div key={i} className="w-1 h-1 rounded-full bg-white/40" />
         ))}
