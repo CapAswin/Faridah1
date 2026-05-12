@@ -19,6 +19,12 @@
 }
 
 @layer base {
+  html,
+  body,
+  #root {
+    position: relative;
+  }
+
   body {
     @apply bg-cream text-ink antialiased selection:bg-berry selection:text-white;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
